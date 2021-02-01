@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Maciej Skorupa</title>
+    <!-- Bootstrap -->
+    <!-- jQuery and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Compiled CSS and JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    {% block additional_css %}
+    {% endblock additional_css %}
+
+    <!-- Font-Awesome -->
+    <link href="{% static 'font_awesome/css/all.min.css' %}" rel="stylesheet">
+
+  </head>
+
+<body>
+  {% block additional %}
+  {% endblock additional %}
+
+<section class="page-container">
+  <div class="content-wrap">
+
+    <header>
+      <nav class="navbar-dim navbar navbar-expand-lg">
+        <div class="navbar-custom container-fluid">
+
+          <a class="logo navbar-brand" href="{% url 'blog:index' %}">Maciej Skorupa</a>
+
+          <div class="nav-custom-right navbar-nav nav navbar-right">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-custom nav-link " href="{% url 'blog:solo' %}">Solo</a></li>
+              <li class="nav-item"><a class="nav-custom nav-link " href="{% url 'blog:bohomaz' %}">Bohomaz</a></li>
+              <li class="nav-item"><a class="nav-custom nav-link " href="{% url 'blog:petla' %}">Pętla</a></li>
+              <li class="nav-item"><a class="nav-custom nav-link " href="{% url 'blog:kontakt' %}">Kontakt</a> </li>
+              <li class="dropdown-custom nav-item dropdown">
+                <a class="nav-custom nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Social
+                </a>
+                <div class="dropdown-custom dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://www.youtube.com/channel/UCWLANMQZqpbk4on9cAAwZeA">YouTube</a>
+                  <a class="dropdown-item" href="https://www.facebook.com/maciek.skorupa.5">FaceBook</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock body_block %}
+    </div>
+
+  </div>
+
+    <footer class="footer">
+        <ul class="footer-ul">
+          <li>
+            <a class="" href="https://www.youtube.com/channel/UCWLANMQZqpbk4on9cAAwZeA">
+              <i class="fab fa-youtube fa-2x footer-icons yt"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/maciek.skorupa.5">
+              <i class="fab fa-facebook fa-2x footer-icons fb"></i>
+            </a>
+          </li>
+            </ul>
+    </footer>
+
+  </section>
+
+</body>
+</html>

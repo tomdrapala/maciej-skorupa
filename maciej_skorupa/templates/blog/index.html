@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block additional %}
+  <div class="background_image" style="background-image: url(../static/images/front_1900.jpg);">
+{% endblock additional %}
+
+
+{% block body_block %}
+
+    {% for post in posts %}
+      <div class="row justify-content-center pt-5">
+        <h4 class="col-10 col-sm-10 col-md-9 col-lg-10">
+          <p class="front-text text-center">{{ post.post_text }}</p>
+        </h4>
+      </div>
+      {% if post.video_address %}
+          <iframe class="video" width=80% height="515"
+          src="{{ post.video_address }}" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+          picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+
+    {% endfor %}
+
+
+
+{% endblock body_block %}

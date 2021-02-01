@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "blog/base.html" %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="static/css/kontakt/kontakt.css">
+{% endblock additional_css %}
+
+{% block additional %}
+<div class="kontakt-nav">
+{% endblock additional %}
+
+
+{% block body_block %}
+
+  {% if email_imie %}
+    <div class="pt-5 pl-5">
+      <h3 class="">Dzięki {{ email_imie }}!</h3>
+      <h4>Otrzymałem Twoją wiadomość i odpowiem wkórtce.</h4>
+    </div>
+  {% else %}
+    <form action="{% url 'blog:kontakt' %}" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">Twoje imię:</label>
+          <textarea class="form-control" name="email-imie" rows="1" placeholder="Imię" required></textarea>
+      </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Twój adres email:</label>
+          <input type="email" class="form-control" name="email-adres"  placeholder="Email" required>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">Wiadomość:</label>
+          <textarea class="form-control" name="email-text" rows="3" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Wyślij</button>
+    </form>
+
+  <div class="alter_email">Jeśli wolisz koszystać z własnej poczty email zapraszam do kontaktu pod adresem
+    <strong>mskorupa.mailing@gmail.com</strong>
+  </div>
+  {% endif %}
+
+
+{% endblock body_block %}

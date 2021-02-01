@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+
+{% block additional %}
+  <div class="background_image" style="background-image: url(../static/images/solo_1900.jpg);">
+{% endblock additional %}
+
+
+{% block body_block %}
+  
+{% for header in headers %}
+  <div class="row justify-content-center">
+    <h5 class="header-text col-10 col-sm-11 col-md-9 col-lg-9 text-center">
+      {{ header.post_text }}
+    </h5>
+    <hr class="line-break-header">
+  </div>
+  {% endfor %}
+
+  {% for post in posts %}
+
+      {% if forloop.counter > 1 %}
+        <hr class="line-break">
+      {% endif %}
+        <div class="row justify-content-center">
+          <h5 class="text col-10 col-sm-11 col-md-9 col-lg-9 text-center">
+            {{ post.post_text }}
+          </h5>
+          <!-- <h6 class="date col-12">{{ post.create_date }}</h6> -->
+        </div>
+      {% if post.video_address %}
+          <iframe class="video" width=80% height="515"
+          src="{{ post.video_address }}" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+          picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+
+  {% endfor %}
+
+{% endblock body_block %}

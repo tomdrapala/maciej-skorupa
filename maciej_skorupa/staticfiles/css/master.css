@@ -1,0 +1,184 @@
+
+/*only Questrial -> @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Questrial&display=swap');
+
+:root {
+    /* --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    */
+
+    /* Custom variables */
+    --font-family-custom: 'Questrial', sans-serif;
+    --font-family-text: var(--font-family-custom);
+
+    --font-family-front: 'Montserrat', sans-serif;
+    --font-family-front-text: var(--font-family-front);
+}
+
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 6rem;
+}
+
+                          /* HEADER */
+
+.navbar-dim {
+  height: 550px;
+  display: block;
+}
+
+.background_image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 550px;
+  min-width: 830px;
+  background-position: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6em;
+  position:absolute;
+  top: 0.4em;
+}
+
+.nav-custom-right {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+}
+
+.logo:hover{
+  color: #ababab;
+}
+
+.nav-custom {
+  color: #fff;
+  font-size: 1.1em;
+  margin-left: 15px;
+}
+
+.nav-custom:hover {
+  color: #ababab;
+}
+
+.dropdown-menu {
+  min-width: 7rem;
+  background-color: #201a16;
+}
+
+.dropdown-custom {
+  width: 7em;
+}
+
+.dropdown-item{
+  color: white;
+}
+.dropdown-item:hover {
+  color: lightgrey;
+  background-color: #201a16;
+}
+
+
+                          /* MAIN */
+
+.text {
+  padding-top: 30px;
+  font-family: var(--font-family-text);
+}
+
+.header-text {
+  padding-top: 40px;
+  font-family: var(--font-family-text);
+}
+
+.front-text {
+  font-family: var(--font-family-front-text);
+  font-size: 16pt;
+}
+
+.video {
+    display: block;
+    margin: 20px auto 30px auto;
+}
+
+.date {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.line-break {
+  width: 65%;
+  margin-top: 65px;
+}
+
+.line-break-header {
+  width: 65%;
+  margin-top: 40px;
+  /* border: 2px solid; */
+}
+
+                          /* FOOTER */
+
+
+.footer {
+  background-color: #E6E6FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+.footer-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.footer-icons{
+  margin: 0 1.2rem;
+  color: #2b2929;
+}
+
+.yt:hover {
+  color: #bd0808;
+}
+
+.fb:hover {
+  color: #2648d4;
+}

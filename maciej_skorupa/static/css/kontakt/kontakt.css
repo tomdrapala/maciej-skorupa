@@ -1,0 +1,14 @@
+.navbar-dim {
+  height: 100px;
+}
+
+.kontakt-nav {
+  height: 70px;
+  background: black;
+  min-width: 815px;
+  margin-bottom: 50px;
+}
+
+.alter_email {
+  margin-top: 2em;
+}
