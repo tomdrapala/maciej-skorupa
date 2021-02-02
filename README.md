@@ -1,4 +1,4 @@
-Repository of application I am developing as an advertising web page / blog for guitar player Maciej Skorupa.
+Repository of application I am developing for guitar player Maciej Skorupa as an advertising web page / blog.
 
 Application uses **Python** as backend language and **Django** as framework.
 
